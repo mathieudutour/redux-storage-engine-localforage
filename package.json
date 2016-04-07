@@ -1,0 +1,36 @@
+{
+  "name": "redux-storage-engine-localforage",
+  "version": "1.0.0",
+  "description": "Version storage with migration for redux-storage",
+  "main": "build/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "make clean build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathieudutour/redux-storage-engine-localforage.git"
+  },
+  "homepage": "https://github.com/mathieudutour/redux-storage-engine-localforage",
+  "keywords": [
+    "redux",
+    "redux-storage",
+    "redux-storage-engine"
+  ],
+  "author": "Mathieu Dutour <mathieu@dutour.me>",
+  "files": [
+    "build/",
+    "src/",
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@mathieudutour/js-fatigue": "^1.0.2"
+  },
+  "peerDependencies": {
+    "redux-storage": ">3.0.0"
+  },
+  "dependencies": {
+    "localforage": "^1.4.0"
+  }
+}
