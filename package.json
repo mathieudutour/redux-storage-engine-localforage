@@ -21,7 +21,7 @@
   "author": "Mathieu Dutour <mathieu@dutour.me>",
   "files": [
     "build/",
-    "src/",
+    "src/"
   ],
   "license": "MIT",
   "devDependencies": {
