@@ -1,1 +1,3 @@
-// TODO
+import test from 'ava'
+
+test.todo('test')
