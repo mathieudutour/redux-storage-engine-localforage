@@ -18,7 +18,7 @@
 
 ## Usage
 
-Versioned storage with migrations.
+Stores everything using localforage.
 
 ```js
 import createEngine from 'redux-storage-engine-localforage'
@@ -33,6 +33,28 @@ const optionalLocalForageConfig = {
 }
 
 engine = createEngine('my-save-key', optionalLocalForageConfig);
+```
+
+You can customize the saving and loading process by providing a [`replacer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter) and/or a [`reviver`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter).
+
+```js
+import createEngine from 'redux-storage-engine-localforage';
+
+function replacer (key, value) {
+  if (typeof value === 'string') {
+    return 'foo';
+  }
+  return value;
+}
+
+function reviver (key, value) {
+  if (key === 'foo') {
+    return 'bar';
+  }
+  return value;
+});
+
+const engine = createEngine('my-save-key', optionalLocalForageConfig, replacer, reviver);
 ```
 
 ## License
