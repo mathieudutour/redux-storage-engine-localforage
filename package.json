@@ -25,12 +25,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@mathieudutour/js-fatigue": "^1.0.2"
+    "@mathieudutour/js-fatigue": "^1.0.7"
   },
   "peerDependencies": {
     "redux-storage": ">3.0.0"
   },
   "dependencies": {
-    "localforage": "^1.4.0"
+    "localforage": "^1.5.6"
   }
 }
